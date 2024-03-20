@@ -78,7 +78,7 @@ const ServerSearch = ({ data }: ServerSearchProps) => {
       </button>
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Search all channels and members" />
-        <CommandList>
+        <CommandList className="no-scrollbar">
           <CommandEmpty>No Results found</CommandEmpty>
           {data.map(({ label, type, data }) => {
             if (!data?.length) return null;
